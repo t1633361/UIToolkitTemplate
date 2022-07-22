@@ -1,0 +1,42 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Uxml/UIEncrypt.uss?fileID=7433441132597879392&amp;guid=3eeee96c07e1b0148bfd2a99705c6435&amp;type=3#UIEncrypt" />
+    <ui:VisualElement name="Root" class="Root">
+        <ui:VisualElement name="Left" class="Left" style="background-color: rgb(56, 56, 56);">
+            <ui:ListView focusable="True" name="FileListView" style="flex-basis: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Right" class="Right">
+            <ui:VisualElement name="Up" class="RightUp" style="background-color: rgb(51, 51, 51);">
+                <ui:ListView focusable="True" name="InfoListView" style="flex-basis: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Down" class="RightDown" style="background-color: rgb(64, 64, 64);">
+                <ui:VisualElement name="Folder">
+                    <ui:VisualElement style="flex-direction: row; justify-content: flex-start; height: 25px;">
+                        <ui:VisualElement style="flex-direction: row; flex-basis: 100%;">
+                            <ui:Label text="SourcePath       :" display-tooltip-when-elided="True" class="Label" />
+                            <ui:Label text="./SourcePath" display-tooltip-when-elided="True" name="SourcePath" class="Label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement>
+                            <ui:Button text="Open" display-tooltip-when-elided="True" name="OpenSourceFolder" class="Button_Small" style="height: 18px; justify-content: flex-start; align-items: flex-start;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement style="flex-direction: row; justify-content: flex-start;">
+                        <ui:VisualElement style="flex-direction: row; flex-basis: 100%; height: 25px;">
+                            <ui:Label text="DestinationPath:" display-tooltip-when-elided="True" class="Label" />
+                            <ui:Label text="./DestinationPath" display-tooltip-when-elided="True" name="DestinationPath" class="Label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement>
+                            <ui:Button text="Open" display-tooltip-when-elided="True" name="OpenDestinationFolder" class="Button_Small" style="flex-basis: auto; height: 18px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Buttons" style="flex-direction: row-reverse; align-items: flex-end;">
+                    <ui:Button text="Encrypt" display-tooltip-when-elided="True" name="Encrypt" class="Button" />
+                    <ui:Button text="Decrypt" display-tooltip-when-elided="True" name="Decrypt" class="Button" />
+                    <ui:Button text="Refresh" display-tooltip-when-elided="True" name="Refresh" class="Button" />
+                    <ui:Button text="ToSource" display-tooltip-when-elided="True" name="ToSource" class="Button" />
+                    <ui:Button text="OpenFile" display-tooltip-when-elided="True" name="OpenFile" class="Button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
