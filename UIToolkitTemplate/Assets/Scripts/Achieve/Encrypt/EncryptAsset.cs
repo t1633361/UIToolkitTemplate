@@ -1,5 +1,4 @@
 using System.IO;
-using UnityEngine;
 
 namespace Achieve.Encrypt
 {
@@ -16,7 +15,6 @@ namespace Achieve.Encrypt
             for (int i = 0; i < bytes.Length; i++)
             {
                 contentAfterChar[i] = (byte)(bytes[i] ^ keyChar[i%5]);
-                Debug.Log($"{bytes[i]}-{contentAfterChar[i]}-{keyChar[i%5]}");
             }
             File.WriteAllBytes(newFilePath, contentAfterChar);
         }
